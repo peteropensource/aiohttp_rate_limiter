@@ -1,6 +1,6 @@
 # aiohttp_client_rate_limiter
 
-This is a mini tool that overwrites ClientSession class from aiohttp (https://pypi.org/project/aiohttp/). This subclass could provide rate limter function with sending out requests within same session.
+This is a mini tool that overwrites ClientSession class from aiohttp (https://pypi.org/project/aiohttp/). This subclass could provide rate limter function while sending out requests within same session.
 
 Example:
 ```python
@@ -18,4 +18,4 @@ await asyncio.gather(*tasks)
 
 await client_session.close()
 ```
-The above example could prove a steady rate of 10 requests / 60 seconds at the maximum concurrency of 5.
+The above example could provide a steady rate of 10 requests/60 seconds at the maximum concurrency of 5.
