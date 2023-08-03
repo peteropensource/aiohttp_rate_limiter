@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='aiohttp_client_rate_limiter',
-    version='1.0.1',
+    version='1.0.2',
     description='This is a mini tool that overwrite aiohttp session to provide rate limit function within a same session.',
     long_description='This is a mini tool that overwrite aiohttp session to provide rate limit function within a same session.',
     author='Peter Lee',
