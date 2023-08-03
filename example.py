@@ -5,16 +5,27 @@ from aiohttp_client_rate_limiter.ClientSession import RateLimitedClientSession
 
 async def main():
 
-    client = RateLimitedClientSession(
+    rl_session = RateLimitedClientSession(
         max_concur=60,
         reqs_per_period=5,
         period_in_secs=10
     )
-    tasks = [asyncio.create_task(client.get(f"https://www.google.com/?q={i}", ssl=False)) for i in range(10)]
+    tasks = [asyncio.create_task(rl_session.get(f"https://www.google.com/?q={i}", ssl=False)) for i in range(10)]
 
     await asyncio.gather(*tasks)
 
-    await client.close()
+    await rl_session.close()
+
+
+async def main2():
+
+    async with RateLimitedClientSession(
+        max_concur=60,
+        reqs_per_period=5,
+        period_in_secs=10
+    ) as rl_session:
+        tasks = [asyncio.create_task(rl_session.get(f"https://www.google.com/?q={i}", ssl=False)) for i in range(10)]
+        await asyncio.gather(*tasks)
 
 
 if __name__ == "__main__":
@@ -33,5 +44,7 @@ if __name__ == "__main__":
         root_logger.addHandler(console_handler)
 
     config_root_logger()
+
     asyncio.run(main())
+    asyncio.run(main2())
 
