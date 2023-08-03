@@ -2,13 +2,13 @@ from setuptools import setup
 
 setup(
     name='aiohttp_client_rate_limiter',
-    version='1.0.0',
+    version='1.0.1',
     description='This is a mini tool that overwrite aiohttp session to provide rate limit function within a same session.',
     long_description='This is a mini tool that overwrite aiohttp session to provide rate limit function within a same session.',
     author='Peter Lee',
     author_email='info@peterlee.space',
-    url='https://github.com/PeterBunBun/aiohttp_rate_limiter',
-    packages=['aiohttp_rate_limiter'],
+    url='https://github.com/peteropensource/aiohttp_rate_limiter',
+    packages=['aiohttp_client_rate_limiter'],
     install_requires=[
         # List any dependencies required by your package
         "aiohttp>=3.8.5",
