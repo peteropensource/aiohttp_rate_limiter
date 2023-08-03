@@ -22,7 +22,7 @@ setup(
         "yarl==1.9.2",
     ],
     classifiers=[
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: Apache License',
         'Programming Language :: Python :: 3',
         # Add any relevant classifiers for your package
     ],
