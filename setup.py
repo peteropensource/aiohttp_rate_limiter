@@ -1,13 +1,13 @@
 from setuptools import setup
 
 setup(
-    name='aiohttp_rate_limiter',
+    name='aiohttp_client_rate_limiter',
     version='1.0.0',
     description='This is a mini tool that overwrite aiohttp session to provide rate limit function within a same session.',
     long_description='This is a mini tool that overwrite aiohttp session to provide rate limit function within a same session.',
     author='Peter Lee',
     author_email='info@peterlee.space',
-    url='https://github.com/your-username/your-package-repo',
+    url='https://github.com/PeterBunBun/aiohttp_rate_limiter',
     packages=['aiohttp_rate_limiter'],
     install_requires=[
         # List any dependencies required by your package
@@ -22,7 +22,7 @@ setup(
         "yarl==1.9.2",
     ],
     classifiers=[
-        'License :: OSI Approved :: Apache License',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 3',
         # Add any relevant classifiers for your package
     ],
